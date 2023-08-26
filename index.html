@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CajeroSimple</title>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header id="loginUsuario">
+        <div>
+            <label for="usuarios" id="labelUsuarios">Usuario: </label>
+            <select name="usuarios" id="usuarios"></select>   
+            <br>
+            <br>
+            <label for="claveUsuario" >Contraseña: </label>
+            <br>
+            <input type="password" name="claveUsuario" id="claveUsuario">
+        </div>
+        <br>
+        <div>
+            <input type="button" id="btnIngresarLogin" value="Ingresar" onclick="Login()">
+        </div>
+    </header>
+    <section id="datosUsuario">
+        <article id="consultaSaldo">
+            <div id="saldoUsuario">
+            </div>
+            <div id="ultimaTransaccion">
+            </div>
+        </article>
+        <article id="articuloTransaccion">
+            <div>
+                <p>Elige la opción que deseas</p> 
+                <input type="button" id="btnConsignar" value="Consignar" onclick="mostrarConsignar()">
+                <input type="button" id="btnRetirar" value="Retirar" onclick="mostrarRetirar()">
+            </div>
+            <div>
+                <p> </p><input type="button" id="btnFinSesion" value="Finalizar Sesión" onclick="inicio()"></p>
+            </div>
+        </article>
+    </section>    
+    <section id="seccionConsignar">
+        <div>
+            <label for="txtConsignar">Valor a consignar</label>
+            <input type="number" name="txtConsignar" id="txtConsignar">
+            <input type="button" id="btnAceptaConsignar" value="Aceptar" onclick="Consignar()">
+            <input type="button" id="btnCancelaConsignar" value="Cancelar" onclick="cancelarConsignar()">            
+        </div>
+    </section>
+    <section id="seccionRetirar">
+        <label for="txtRetirar">Valor a retirar</label>
+        <input type="number" name="txtRetirar" id="txtRetirar">
+        <input type="button" id="btnAceptaRetirar" value="Aceptar" onclick="Retirar()">
+        <input type="button" id="btnCancelaRetirar" value="Cancelar" onclick="cancelarRetirar()">        
+    </section>
+    <div id="mensajeError" class="container"></div>
+    <section id="datosOcultos">
+        <input type="" id="usuarioSesion">
+    </section>
+</body>
+</html>
